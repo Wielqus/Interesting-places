@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">InterestingPlaces</string>
     <string name="title_activity_maps">Map</string>
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_main">Main</string>
+    <string name="topBarLabel">Interesting Places</string>
 </resources>
