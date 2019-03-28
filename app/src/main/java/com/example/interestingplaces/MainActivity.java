@@ -1,20 +1,12 @@
 package com.example.interestingplaces;
 
-import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
-import android.app.Activity;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
 
 import com.firebase.ui.auth.AuthUI;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -35,12 +27,15 @@ public class MainActivity extends AppCompatActivity implements  BottomNavigation
         BottomNavigationView navigation = findViewById(R.id.mainNavigation);
         navigation.setOnNavigationItemSelectedListener(this);
 
-        //laduje fragment z mapa
-        loadFragment(new MapFragment());
-
+        //definiuje fragmenty
         mapFragment = new MapFragment();
         profileFragment = new ProfileFragment();
         placesFragment = new PlacesFragment();
+
+        //laduje fragment z mapa
+        loadFragment(mapFragment);
+
+
 
     }
 

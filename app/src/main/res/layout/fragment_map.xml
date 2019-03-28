@@ -21,5 +21,7 @@
             map:layout_constraintTop_toTopOf="parent"
             tools:context=".MapsActivity"
             tools:layout_editor_absoluteX="0dp" />
+
     </android.support.constraint.ConstraintLayout>
+
 </FrameLayout>
