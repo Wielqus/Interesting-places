@@ -4,4 +4,9 @@
     <string name="title_activity_login">Login</string>
     <string name="title_activity_main">Main</string>
     <string name="topBarLabel">Interesting Places</string>
+    <string name="title_activity_profile">ProfileActivity</string>
+    <string name="title_activity_places">PlacesActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

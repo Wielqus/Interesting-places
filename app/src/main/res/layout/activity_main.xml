@@ -12,8 +12,10 @@
         android:layout_height="50dp"
         android:background="#222222"
         android:theme="@style/Animation.AppCompat.DropDownUp"
+        app:layout_constraintBottom_toTopOf="@+id/frame_container"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="0dp">
+
         <TextView
             android:id="@+id/TopBarLabel"
             android:layout_width="wrap_content"
@@ -24,27 +26,27 @@
             tools:layout_editor_absoluteX="29dp"
             tools:layout_editor_absoluteY="16dp"
             tools:text="@string/app_name" />
-
-        <Spinner
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:dropDownWidth="wrap_content"
-            android:spinnerMode="dropdown"
-            tools:layout_editor_absoluteX="171dp"
-            tools:layout_editor_absoluteY="25dp"></Spinner>
-
     </android.support.v7.widget.Toolbar>
 
-    <android.support.design.button.MaterialButton
-        android:id="@+id/logOutButton"
-        android:layout_width="113dp"
-        android:layout_height="223dp"
-        android:layout_marginTop="50dp"
-        android:text="Wyloguj"
+
+    <FrameLayout
+        android:id="@+id/frame_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/mainNavigation"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:layout_editor_absoluteX="96dp" />
+
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/mainNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
-
-
+        app:itemBackground="@color/colorPrimary"
+        app:itemTextColor="@color/colorAccent"
+        app:menu="@menu/navigation"/>
 
 </android.support.constraint.ConstraintLayout>
