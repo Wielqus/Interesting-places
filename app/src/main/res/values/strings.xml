@@ -7,6 +7,11 @@
     <string name="title_activity_profile">ProfileActivity</string>
     <string name="title_activity_places">PlacesActivity</string>
 
+
+    <!-- NAVIGATION -->
+    <string name="navigation_profile">Profil użytkownika</string>
+    <string name="navigation_map">Mapa</string>
+    <string name="navigation_places">Lista miejsc</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

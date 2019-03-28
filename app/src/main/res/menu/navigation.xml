@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
     <item
         android:id="@+id/navigation_profile"
-        android:title="Profil"/>
+        android:icon="@drawable/ic_user_icon" />
 
     <item
         android:id="@+id/navigation_map"
-        android:title="Mapa"/>
+        android:icon="@drawable/ic_map_icon"/>
 
     <item
         android:id="@+id/navigation_places"
-        android:title="Miejsca"/>
+        android:icon="@drawable/ic_place_icon"/>
 </menu>

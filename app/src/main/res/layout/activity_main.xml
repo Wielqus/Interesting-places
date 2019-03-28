@@ -41,12 +41,11 @@
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/mainNavigation"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:itemBackground="@color/colorPrimary"
-        app:itemTextColor="@color/colorAccent"
+        app:itemIconSize="30dp"
         app:menu="@menu/navigation"/>
 
 </android.support.constraint.ConstraintLayout>

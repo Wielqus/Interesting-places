@@ -6,6 +6,7 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
 import android.view.MenuItem;
 
 import com.firebase.ui.auth.AuthUI;
@@ -34,7 +35,6 @@ public class MainActivity extends AppCompatActivity implements  BottomNavigation
 
         //laduje fragment z mapa
         loadFragment(mapFragment);
-
 
 
     }
@@ -78,6 +78,7 @@ public class MainActivity extends AppCompatActivity implements  BottomNavigation
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+
         Fragment fragment = null;
         switch (menuItem.getItemId()) {
             case R.id.navigation_profile:
