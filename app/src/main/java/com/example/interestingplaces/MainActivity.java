@@ -35,22 +35,9 @@ public class MainActivity extends AppCompatActivity implements  BottomNavigation
 
         //laduje fragment z mapa
         loadFragment(mapFragment);
+        navigation.setSelectedItemId(R.id.navigation_map);
 
 
-    }
-
-    /**
-     * Sing out user
-     */
-    public void signOut() {
-        AuthUI.getInstance()
-                .signOut(this)
-                .addOnCompleteListener(new OnCompleteListener<Void>() {
-                    public void onComplete(@NonNull Task<Void> task) {
-                        Intent myIntent = new Intent(MainActivity.this, LoginActivity.class);
-                        MainActivity.this.startActivity(myIntent);
-                    }
-                });
     }
 
     /**
