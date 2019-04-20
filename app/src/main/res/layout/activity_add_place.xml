@@ -46,17 +46,15 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <android.support.design.button.MaterialButton
+                android:id="@+id/selectPlaceButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="@string/selectPlace" />
+
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <android.support.design.widget.TextInputEditText
-                    android:id="@+id/placeLocalization"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:hint="@string/placeLocalization" />
-
-            </android.support.design.widget.TextInputLayout>
+                android:layout_height="match_parent"/>
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"

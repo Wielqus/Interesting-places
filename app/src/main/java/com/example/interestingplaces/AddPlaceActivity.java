@@ -11,6 +11,7 @@ import android.widget.Button;
 public class AddPlaceActivity extends AppCompatActivity {
 
     MaterialButton addImagesButton;
+    MaterialButton selectPlaceButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,12 +21,24 @@ public class AddPlaceActivity extends AppCompatActivity {
         addImagesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                /*
                 Intent intent = new Intent();
                 intent.setAction(android.content.Intent.ACTION_VIEW);
-                Uri uri = Uri.parse("file://" + file.getAbsolutePath());
+                Uri uri = Uri.parse("file://"etAbsolutePath());
                 intent.setDataAndType(uri,"image/*");
                 startActivity(intent);
+                */
             }
         });
+
+        selectPlaceButton = findViewById(R.id.selectPlaceButton);
+        selectPlaceButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(AddPlaceActivity.this, SelectPlaceActivity.class);
+                AddPlaceActivity.this.startActivity(myIntent);
+            }
+        });
+
     }
 }

@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "561745743922",
+    "firebase_url": "https://interestingplaces-2ccf4.firebaseio.com",
+    "project_id": "interestingplaces-2ccf4",
+    "storage_bucket": "interestingplaces-2ccf4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:561745743922:android:34ae65d7c4c60471",
+        "android_client_info": {
+          "package_name": "com.example.interestingplaces"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "561745743922-v4kkm007lhmt6ukcpk9ti7u8nav1nad0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.interestingplaces",
+            "certificate_hash": "0c1f33e1e44e0aaa24725adae5eacfa4b0bfe0ab"
+          }
+        },
+        {
+          "client_id": "561745743922-pulrvqt4btl0geq1urq90e40crh2n6jc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.interestingplaces",
+            "certificate_hash": "d87327dfb36c9a2446fbc2804437f68e2d99b609"
+          }
+        },
+        {
+          "client_id": "561745743922-u7kaj0g4j08qhfuie9pk0m65am3octjm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDbNUMUmZibwCtN1keDxSD9NKEf4p-6Io"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "561745743922-u7kaj0g4j08qhfuie9pk0m65am3octjm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
