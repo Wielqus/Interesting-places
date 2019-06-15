@@ -53,7 +53,6 @@ public class MainActivity extends AppCompatActivity implements  BottomNavigation
             return true;
         }
         return false;
-
     }
 
     /**

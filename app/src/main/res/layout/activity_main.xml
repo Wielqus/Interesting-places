@@ -23,6 +23,7 @@
             android:text="@string/topBarLabel"
             android:textColor="#ffffff"
             android:textSize="20dp"
+            android:gravity="center"
             tools:layout_editor_absoluteX="29dp"
             tools:layout_editor_absoluteY="16dp"
             tools:text="@string/app_name" />
@@ -35,7 +36,21 @@
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/mainNavigation"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        tools:layout_editor_absoluteX="96dp" />
+        tools:layout_editor_absoluteX="161dp">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ikona" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="120dp"
+            android:layout_height="191dp"
+            android:layout_gravity="center_horizontal"
+            app:srcCompat="@drawable/ikona2" />
+    </FrameLayout>
 
 
     <android.support.design.widget.BottomNavigationView
