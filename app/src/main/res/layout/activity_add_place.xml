@@ -46,18 +46,22 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <android.support.design.widget.TextInputLayout
+            <android.support.design.button.MaterialButton
+                android:id="@+id/selectPlaceButton"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="match_parent"
+                android:text="@string/selectPlace" />
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <android.support.design.widget.TextInputEditText
+                <EditText
                     android:id="@+id/placeName"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ems="10"
                     android:hint="@string/placeName" />
 
             </android.support.design.widget.TextInputLayout>
@@ -67,7 +71,7 @@
                 android:layout_height="match_parent">
 
                 <EditText
-                    android:id="@+id/editText3"
+                    android:id="@+id/placeDescription"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
