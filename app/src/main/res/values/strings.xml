@@ -22,4 +22,6 @@
     <string name="placeDescription">Opis miejsca</string>
     <string name="placeImages">Dodaj zdjęcia</string>
     <string name="selectPlace">Wybierz miejsce</string>
+    <string name="Add">Dodaj</string>
+
 </resources>

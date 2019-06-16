@@ -46,12 +46,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <android.support.design.button.MaterialButton
-                android:id="@+id/selectPlaceButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:text="@string/selectPlace" />
-
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
@@ -83,10 +77,10 @@
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.button.MaterialButton
-                android:id="@+id/placeImages"
+                android:id="@+id/addButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@string/placeImages" />
+                android:text="@string/Add" />
 
         </LinearLayout>
     </ScrollView>
