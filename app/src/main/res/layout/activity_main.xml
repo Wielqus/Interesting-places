@@ -10,7 +10,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="#222222"
+        android:background="#2081C3"
         android:theme="@style/Animation.AppCompat.DropDownUp"
         app:layout_constraintBottom_toTopOf="@+id/frame_container"
         app:layout_constraintTop_toTopOf="parent"
@@ -20,13 +20,13 @@
             android:id="@+id/TopBarLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/topBarLabel"
+            android:gravity="center"
+            android:text="BestPlaces"
             android:textColor="#ffffff"
             android:textSize="20dp"
-            android:gravity="center"
             tools:layout_editor_absoluteX="29dp"
             tools:layout_editor_absoluteY="16dp"
-            tools:text="@string/app_name" />
+            tools:text="BestPlaces" />
     </android.support.v7.widget.Toolbar>
 
 
@@ -36,21 +36,7 @@
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/mainNavigation"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        tools:layout_editor_absoluteX="161dp">
-
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ikona" />
-
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="120dp"
-            android:layout_height="191dp"
-            android:layout_gravity="center_horizontal"
-            app:srcCompat="@drawable/ikona2" />
-    </FrameLayout>
+        tools:layout_editor_absoluteX="161dp"/>
 
 
     <android.support.design.widget.BottomNavigationView

@@ -10,7 +10,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="#222222"
+        android:background="#2081C3"
         android:theme="@style/Animation.AppCompat.DropDownUp"
         app:layout_constraintBottom_toTopOf="@+id/frame_container"
         app:layout_constraintTop_toTopOf="parent"

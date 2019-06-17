@@ -15,14 +15,25 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.GeoPoint;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 
-public class MapFragment extends Fragment {
+public class MapFragment extends Fragment implements View.OnCreateContextMenuListener,OnMapReadyCallback {
 
     private GoogleMap mMap;
     private FloatingActionButton addPlaceButton;
+    private FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     @Nullable
     @Override
@@ -42,9 +53,50 @@ public class MapFragment extends Fragment {
     }
 
     @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        SupportMapFragment mapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
+    }
+
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        SupportMapFragment mapFragment = (SupportMapFragment) getActivity().getSupportFragmentManager().findFragmentById(R.id.map);
+
+    }
+
+    public void onMapReady(GoogleMap map) {
+        mMap = map;
+
+        db.collection("Places")
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+
+                                GeoPoint geoPoint = document.getGeoPoint("position");
+                                double lat = geoPoint.getLatitude();
+                                double lng = geoPoint.getLongitude ();
+                                LatLng latLng = new LatLng(lat, lng);
+
+                                // Creating a marker
+                                MarkerOptions markerOptions = new MarkerOptions();
+
+                                // Setting the position for the marker
+                                markerOptions.position(latLng);
+
+                                // Setting the title for the marker.
+                                // This will be displayed on taping the marker
+                                markerOptions.title(document.get("name").toString());
+
+                                // Placing a marker on the touched position
+                                mMap.addMarker(markerOptions);
+                            }
+                        }
+                    }
+                });
     }
 
 

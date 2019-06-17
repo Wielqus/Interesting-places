@@ -10,7 +10,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="#222222"
+        android:background="#2081C3"
         android:theme="@style/Animation.AppCompat.DropDownUp"
         app:layout_constraintBottom_toTopOf="@+id/frame_container"
         app:layout_constraintTop_toTopOf="parent"
@@ -46,8 +46,9 @@
         android:id="@+id/okButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
         android:text="Ok"
-        tools:layout_editor_absoluteX="306dp"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar"
         tools:layout_editor_absoluteY="0dp" />
 
 </android.support.constraint.ConstraintLayout>
